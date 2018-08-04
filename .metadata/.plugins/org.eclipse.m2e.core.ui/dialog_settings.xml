@@ -4,10 +4,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="cn.xupt"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="e3-cart-web"/>
+			<item value="e3-parent"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -88,9 +91,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\JAVAEE\items\e3-cart"/>
 			<item value="E:\JAVAEE\items\e3-cart\e3-cart-interface"/>
 			<item value="E:\JAVAEE\items\e3-parent"/>
-			<item value="E:\JAVAEE\items\e3-cart"/>
 			<item value="E:\JAVAEE\items\e3-sso"/>
 			<item value="E:\JAVAEE\items\e3-manager\e3-manager-service"/>
 			<item value="E:\JAVAEE\items\e3-manager"/>
