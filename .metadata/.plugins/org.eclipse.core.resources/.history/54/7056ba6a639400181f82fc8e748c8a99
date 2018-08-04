@@ -1,0 +1,7 @@
+package cn.xupt.search.message;
+
+import javax.jms.MessageListener;
+
+public class ItemAddMessageListener implements MessageListener {
+
+}

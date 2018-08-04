@@ -1,0 +1,13 @@
+package cn.cupt.freemarker;
+
+import freemarker.template.Configuration;
+
+public class FreeMakerTest {
+
+	public void testFreeMarker() throws Exception{
+		
+		//创建一个模板文件
+		//创建一个configuration对象
+		Configuration configuration = new Configuration(Configuration.getVersion());
+	}
+}

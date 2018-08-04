@@ -1,0 +1,8 @@
+package cn.xupt.sso.service;
+
+import cn.xupt.common.utils.E3Result;
+
+public interface RegisterService {
+
+	public E3Result checkData(String param, int type);
+}

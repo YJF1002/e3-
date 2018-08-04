@@ -1,0 +1,28 @@
+package cn.xupt.search.exception;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.omg.CORBA.PRIVATE_MEMBER;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.support.StaticApplicationContext;
+import org.springframework.web.servlet.HandlerExceptionResolver;
+import org.springframework.web.servlet.ModelAndView;
+
+public class GlobalExceptionResolver implements HandlerExceptionResolver {
+
+	@Override
+	public ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object object,
+			Exception exception) {
+		private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionResolver.class);
+		//打印控制台
+		exception.printStackTrace();
+		//写日志
+		
+		//发邮件，发短信
+		//显示错误页面
+		return null;
+	}
+
+}

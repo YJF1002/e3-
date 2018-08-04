@@ -1,0 +1,30 @@
+package cn.xupt.item.Listener;
+
+import javax.jms.MessageListener;
+import javax.jms.TextMessage;
+
+import org.apache.zookeeper.server.quorum.QuorumCnxManager.Message;
+
+public class HtmlGenListener implements MessageListener{
+	
+	@onMessage
+	public void onMessage(Message message){
+		//创建一个模板，参考jsp
+		TextMessage textMessage = (TextMessage) message;
+		//从消息中取出商品id
+		//根据商品id查询商品信息，商品基本信息和商品描述
+		//创建一个 数据集，把商品数据封装
+		//加载模板对象
+		//创建一个输出液，指定输出的目录及文件名
+		//生成静态页面
+		//关闭流
+		
+	}
+
+	@Override
+	public void onMessage(javax.jms.Message arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

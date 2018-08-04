@@ -1,0 +1,47 @@
+package cn.xupt.content.service.util;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import cn.xupt.mapper.TbContentCategoryMapper;
+import cn.xupt.pojo.TbContentCategory;
+import cn.xupt.pojo.TbContentCategoryExample;
+
+public class RecursiveDelete {
+	
+	@Autowired
+	private TbContentCategoryMapper contentCategoryMapper;
+	
+	public List<TbContentCategory> getChildNodeList(Long id){
+		//查询所有的子节点对象
+		TbContentCategoryExample example = new TbContentCategoryExample();
+		TbContentCategoryExample.Criteria criteria = example.createCriteria();
+		criteria.andParentIdEqualTo(id);
+		return contentCategoryMapper.selectByExample(example);
+		
+	}
+	
+	public void deleteCategoryAndChildNode(Long id){
+		//获取category对象
+		TbContentCategory tbContentCategory = contentCategoryMapper.selectByPrimaryKey(id);
+		//判断是否为父节点
+		if(tbContentCategory.getIsParent()){
+			List<TbContentCategory> list = getChildNodeList(id);
+			//删除所有孩子节点
+			for (TbContentCategory Category : list) {
+				deleteCategoryAndChildNode(id);
+			}
+		}
+		//判断父节点有没有其他子节点
+		if (getChildNodeList(tbContentCategory.getParentId()).size()==1) {
+			//没有则将父节点变为叶子节点
+			TbContentCategory pContentCategory = contentCategoryMapper.selectByPrimaryKey(tbContentCategory.getParentId());
+			pContentCategory.setIsParent(false);
+			contentCategoryMapper.updateByPrimaryKey(pContentCategory);
+			
+		}
+		contentCategoryMapper.deleteByPrimaryKey(id);
+		return;
+	}
+}

@@ -1,0 +1,44 @@
+package cn.xupt.search.mapper;
+
+import org.apache.solr.client.solrj.SolrQuery;
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.response.QueryResponse;
+import org.apache.solr.common.SolrDocumentList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import cn.xupt.common.pojo.SearchResult;
+
+/**
+ * 商品搜索dao
+ * <p>Title: SearchDao</p>
+ * <p>Description: </p>
+ * <p>Company: www.itcast.cn</p> 
+ * @version 1.0
+ */
+@Repository
+public class SearchDao {
+	
+	@Autowired
+	private SolrServer solrServer;
+	
+	/**
+	 * 根据查询条件查询索引库
+	 * <p>Title: search</p>
+	 * <p>Description: </p>
+	 * @param query
+	 * @return
+	 */
+	public SearchResult search(SolrQuery query){
+		//根据query查询索引库
+		QueryResponse queryResponse = solrServer.query(query);
+		//取查询结果
+		SolrDocumentList solrDocumentList = queryResponse.getResults();
+		//取查询结果总记录数
+		long numFound = solrDocumentList.getNumFound();
+		SearchResult result = new SearchResult();
+		result.setRecordCount(numFound);
+		//取商品列表，需要取高亮显示
+		//返回结果
+	}
+}

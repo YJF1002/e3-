@@ -1,0 +1,14 @@
+package cn.xupt.service.impl;
+
+import cn.xupt.pojo.TbItem;
+import cn.xupt.service.ItemService;
+
+public class ItemServiceImpl implements ItemService {
+
+	@Override
+	public TbItem getItemById(long itemId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

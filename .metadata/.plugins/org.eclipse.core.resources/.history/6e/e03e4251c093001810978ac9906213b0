@@ -1,0 +1,32 @@
+package cn.xupt.solrj;
+
+import org.apache.solr.client.solrj.impl.CloudSolrServer;
+import org.apache.solr.common.SolrInputDocument;
+import org.junit.Test;
+
+import com.sun.tools.doclets.internal.toolkit.MemberSummaryWriter;
+
+public class TestSolrCloud {
+
+	@Test
+	public void testAddDocument() throws Exception{
+		//创建一个集群链接，应该使用cloudSolrServer创建
+		CloudSolrServer solrServer = new CloudSolrServer("192.168.25.122:2185,"
+				+ "192.168.25.122:2186,192.168.25.122:2187");
+		//设置一个dedaultcollection属性
+		solrServer.setDefaultCollection("collection2");
+		//创建一个文档对象
+		SolrInputDocument document = new SolrInputDocument();
+		//向文挡中添加域
+		document.setField("id", "solrcloud01");
+		document.setField("item_title", "测试商品");
+		document.setField("item_price", 123);
+		
+		//把文件写入索引库
+		solrServer.add(document);
+		//提交
+		solrServer.commit();
+	}
+	
+	
+}

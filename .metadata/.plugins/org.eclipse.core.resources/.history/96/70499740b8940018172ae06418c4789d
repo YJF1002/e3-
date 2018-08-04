@@ -1,0 +1,7 @@
+package cn.xupt.item.pojo;
+
+import cn.xupt.pojo.TbItem;
+
+public class Item extends TbItem {
+
+}

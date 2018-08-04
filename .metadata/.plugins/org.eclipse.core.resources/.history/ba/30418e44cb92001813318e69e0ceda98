@@ -1,0 +1,7 @@
+package cn.xupt.search.service.Impl;
+
+import cn.xupt.search.service.SearchService;
+
+public interface SearchServiceImpl extends SearchService {
+
+}

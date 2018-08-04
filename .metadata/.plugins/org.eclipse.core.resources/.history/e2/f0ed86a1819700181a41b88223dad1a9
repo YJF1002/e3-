@@ -1,0 +1,20 @@
+package cn.xupt.sso.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+/**
+ * 根据token查询controller注解
+ * <p>Title: TokenController</p>
+ * <p>Description: </p>
+ * <p>Company: www.itcast.cn</p> 
+ * @version 1.0
+ */
+
+import cn.xupt.sso.service.TokenService;
+@Controller
+public class TokenController {
+
+	@Autowired
+	private TokenService tokenService;
+	
+}

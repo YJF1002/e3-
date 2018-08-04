@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=e3-manager-interface/src\/main\/java&lt;cn.xupt.service{ItemService.java[ItemService" modifiers="513" timestamp="1533038673901"/>
+<typeInfo handle="=e3-manager-service/C:\/Program Files\/Java\/jdk1.8.0_112\/jre\/lib\/rt.jar&lt;java.awt.event(ItemListener.class[ItemListener" modifiers="1537" timestamp="1491806242875"/>
+<typeInfo handle="=e3-common/C:\/Program Files\/Java\/jdk1.8.0_112\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1491806242875"/>
+<typeInfo handle="=e3-manager-pojo/src\/main\/java&lt;cn.xupt.pojo{TbItem.java[TbItem" modifiers="1" timestamp="1532161840419"/>
+<typeInfo handle="=e3-sso-service/C:\/Program Files\/Java\/jdk1.8.0_112\/jre\/lib\/rt.jar&lt;javax.security.auth.spi(LoginModule.class[LoginModule" modifiers="1537" timestamp="1491806242875"/>
+<typeInfo handle="=e3-sso-interface/src\/main\/java&lt;cn.xupt.sso.service{LoginService.java[LoginService" modifiers="513" timestamp="1533278876170"/>
+</typeInfoHistroy>

@@ -1,0 +1,14 @@
+package cn.xupt.sso.service.Impl;
+
+import cn.xupt.common.utils.E3Result;
+import cn.xupt.sso.service.LoginService;
+
+public class LoginServiceImpl implements LoginService {
+
+	@Override
+	public E3Result userLogin(String username, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

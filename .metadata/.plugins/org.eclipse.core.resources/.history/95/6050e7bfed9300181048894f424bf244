@@ -1,0 +1,22 @@
+package cn.xupt.pagehelper;
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.Session;
+
+import org.apache.activemq.ActiveMQConnectionFactory;
+
+
+public class ActiveMaTest {
+
+	public void testQueueProducer() throws Exception{
+		//创建工厂连接对象
+		ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://192.168.25.122:61616");
+	
+		//使用工厂对象创建一个Connection对象
+		Connection connection = connectionFactory.createConnection();
+		//3.开启连接，调用connection对象的start方法
+		connection.start();
+		//4.创建一个Session对象
+		 connection.createSession(false, Session.AUTO_ACKNOWLEDGE)
+	}
+}

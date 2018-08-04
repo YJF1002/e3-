@@ -1,0 +1,38 @@
+package cn.xupt.search.message;
+
+import javax.jms.Message;
+import javax.jms.MessageListener;
+import javax.jms.TextMessage;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import cn.xupt.common.pojo.SearchItem;
+import cn.xupt.search.mapper.ItemMapper;
+/**
+ * 商品添加信息，接收消息后，将对应的商品信息同步到索引库
+ * <p>Title: ItemAddMessageListener</p>
+ * <p>Description: </p>
+ * <p>Company: www.itcast.cn</p> 
+ * @version 1.0
+ */
+public class ItemAddMessageListener implements MessageListener {
+
+	@Autowired
+	private ItemMapper itemMapper;
+	
+	@Override
+	public void onMessage(Message message) {
+		//从消息中取出商品id
+		TextMessage textMessage = (TextMessage) message;
+		String text = textMessage.getText();
+		Long itemId = new Long(text);
+		//根据商品id查询商品信息
+		SearchItem searchItem = 
+		//创建一个对象文档
+		//向文档对象中添加域
+		//把文档写入索引库
+		//提交
+		
+	}
+
+}

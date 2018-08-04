@@ -1,0 +1,25 @@
+package cn.xupt.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.xupt.pojo.TbItem;
+import cn.xupt.service.ItemService;
+
+@Controller
+public class ItemController {
+
+	@Autowired
+	private ItemService itemService;
+	
+	
+	@RequestMapping("/item/{itemId}")
+	@RequestBody
+	public TbItem geTbItemById(@PathVariable Long itemId){
+		TbItem tbItem = itemService.getItemById(itemId);
+		return tbItem;
+	}
+}

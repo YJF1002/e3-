@@ -1,0 +1,8 @@
+package cn.xupt.service;
+
+import cn.xupt.pojo.TbItem;
+
+public interface ItemService {
+	
+	public TbItem getItemById(long itemId);
+}

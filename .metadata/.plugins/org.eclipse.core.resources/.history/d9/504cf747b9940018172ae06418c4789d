@@ -1,0 +1,30 @@
+package cn.xupt.item.pojo;
+
+import cn.xupt.pojo.TbItem;
+
+public class Item extends TbItem {
+
+	public Item(TbItem tbItem){
+		this.setId(tbItem.getId());
+		this.setTitle(tbItem.getId());
+		this.setSellPoint(tbItem.getId());
+		this.setPrice(tbItem.getId());
+		this.setNum(tbItem.getId());
+		this.setBarcode(tbItem.getId());
+		this.setImage(tbItem.getId());
+		this.setCid(tbItem.getId());
+		this.setStatus(tbItem.getId());
+		this.setCreated(tbItem.getId());
+		this.setUpdated(tbItem.getId());
+		
+	}
+		
+	public String[] getImages(){
+		String image2 = this.getImage();
+		if(image2 != null && "".equals(image2)){
+			String[] strings = image2.split(",");
+			return strings;
+		}
+		return null;
+	}
+}

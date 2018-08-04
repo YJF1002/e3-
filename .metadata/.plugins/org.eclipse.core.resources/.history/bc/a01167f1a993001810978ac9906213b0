@@ -1,0 +1,14 @@
+package cn.xupt.solrj;
+
+import org.apache.solr.client.solrj.impl.CloudSolrServer;
+
+public class TestSolrCloud {
+
+	public void testAddDocument() throws Exception{
+		//创建一个集群链接，应该使用cloudSolrServer创建
+		CloudSolrServer solrServer = new CloudSolrServer("192.168.25.122:2185,"
+				+ "192.168.25.122:2186,192.168.25.122:2187");
+	}
+	
+	
+}

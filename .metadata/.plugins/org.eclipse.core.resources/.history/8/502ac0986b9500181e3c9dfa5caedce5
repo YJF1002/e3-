@@ -1,0 +1,25 @@
+package cn.xupt.pagehelper;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import cn.xupt.common.jedis.JedisClientCluster;
+import redis.clients.jedis.JedisPool;
+
+
+public class JedisClientTest {
+
+	@Test
+	public void testJedisClient() throws Exception {
+		//初始化spring容器
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-redis.xml");
+		//从容器中获得JedisClient对象
+		JedisPool jedisPool = applicationContext.getBean(JedisPool.class);
+		jedisPool.set("mytest", "jedisClient");
+		String string = jedisPool.get("mytest");
+		System.out.println(string);
+		
+		
+	}
+}

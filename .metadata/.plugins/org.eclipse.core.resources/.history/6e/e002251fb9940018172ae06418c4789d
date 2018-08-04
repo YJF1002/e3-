@@ -1,0 +1,19 @@
+package cn.xupt.item.pojo;
+
+import cn.xupt.pojo.TbItem;
+
+public class Item extends TbItem {
+
+	public Item(TbItem tbItem){
+		this.setId(tbItem.getId());
+	}
+		
+	public String[] getImages(){
+		String image2 = this.getImage();
+		if(image2 != null && "".equals(image2)){
+			String[] strings = image2.split(",");
+			return strings;
+		}
+		return null;
+	}
+}
