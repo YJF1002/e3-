@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="211" key="DIALOG_X_ORIGIN"/>
+		<item value="372" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="cart" key="selection"/>
+		<item value="cartAdd" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="item"/>
-			<item value="portal"/>
-			<item value="e3"/>
-			<item value="emall"/>
-			<item value="ema"/>
-			<item value="\"/>
-			<item value="mq"/>
-			<item value="ma"/>
+			<item value="cartAdd"/>
+			<item value="catAdd"/>
+			<item value="购物车"/>
+			<item value="addCart"/>
+			<item value="append"/>
+			<item value="totalPrice"/>
+			<item value="tSubtotal"/>
+			<item value="小计"/>
 		</list>
 		<list key="replacehistory">
 			<item value="cart"/>
@@ -31,7 +35,7 @@
 		<item value="325" key="DIALOG_WIDTH"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 		<item value="444" key="DIALOG_HEIGHT"/>
-		<item value="110" key="DIALOG_Y_ORIGIN"/>
-		<item value="171" key="DIALOG_X_ORIGIN"/>
+		<item value="94" key="DIALOG_Y_ORIGIN"/>
+		<item value="-602" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

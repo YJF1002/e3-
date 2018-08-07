@@ -23,9 +23,17 @@
 		<property name="templateLoaderPath" value="/WEB-INF/ftl/" />
 		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="cn.xupt.cart.interceptor.LoginInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-cart-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.122:2181"/>	
-<!-- 	<dubbo:reference interface="cn.xupt.service.ItemService" id="itemService" /> 
- -->	
+	<dubbo:reference interface="cn.xupt.service.ItemService" id="itemService" /> 
+ 	<dubbo:reference interface="cn.xupt.sso.service.TokenService" id="tokenService" /> 
+ 	<dubbo:reference interface="cn.xupt.cart.service.CartService" id="cartService" /> 
+ 	
 </beans>

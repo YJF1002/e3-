@@ -1,0 +1,8 @@
+package cn.xupt.cart.service;
+
+import cn.xupt.common.utils.E3Result;
+
+public class CartService {
+
+	public E3Result addCart(long userId, long itemId, int num)
+}

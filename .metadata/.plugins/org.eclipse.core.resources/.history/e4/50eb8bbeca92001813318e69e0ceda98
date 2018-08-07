@@ -1,5 +1,0 @@
-package cn.xupt.search.service;
-
-public interface SearchService {
-
-}

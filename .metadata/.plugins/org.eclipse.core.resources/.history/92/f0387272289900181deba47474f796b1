@@ -1,0 +1,7 @@
+package cn.xupt.order.pojo;
+
+import cn.xupt.pojo.TbOrder;
+
+public class OrderInfo extends TbOrder {
+
+}

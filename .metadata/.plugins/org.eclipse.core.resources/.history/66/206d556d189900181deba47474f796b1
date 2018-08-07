@@ -1,0 +1,26 @@
+package cn.xupt.order.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.xupt.cart.service.CartService;
+import cn.xupt.pojo.TbUser;
+
+@Controller
+public class OrderController {
+
+	@Autowired
+	private CartService cartService;
+	
+	@RequestMapping("/order/order-cart")
+	public String showOrderCart(HttpServletRequest request){
+		//取用户id
+		TbUser user = (TbUser) request.getAttribute("user");
+		//根据用户id取购物车列表
+		cartService.getCartList(user.getId());
+		
+	}
+}

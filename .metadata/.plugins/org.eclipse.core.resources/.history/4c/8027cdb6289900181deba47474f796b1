@@ -1,0 +1,14 @@
+package cn.xupt.order.pojo;
+
+import java.io.Serializable;
+import java.util.List;
+
+import cn.xupt.pojo.TbOrder;
+import cn.xupt.pojo.TbOrderItem;
+import cn.xupt.pojo.TbOrderShipping;
+
+public class OrderInfo extends TbOrder implements Serializable{
+
+	private List<TbOrderItem> orderItems;
+	private TbOrderShipping orderShipping;
+}

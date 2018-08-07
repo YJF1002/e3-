@@ -1,0 +1,15 @@
+package cn.xupt.order.service.impl;
+
+import cn.xupt.common.utils.E3Result;
+import cn.xupt.order.pojo.OrderInfo;
+import cn.xupt.order.service.OrderService;
+
+public class OrderServiceImpl implements OrderService {
+
+	@Override
+	public E3Result createOrder(OrderInfo orderInfo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

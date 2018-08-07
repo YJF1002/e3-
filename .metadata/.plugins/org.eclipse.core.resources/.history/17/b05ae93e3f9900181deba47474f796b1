@@ -1,0 +1,30 @@
+package cn.xupt.order.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import cn.xupt.common.jedis.JedisClient;
+import cn.xupt.common.utils.E3Result;
+import cn.xupt.mapper.TbOrderItemMapper;
+import cn.xupt.mapper.TbOrderMapper;
+import cn.xupt.mapper.TbOrderShippingMapper;
+import cn.xupt.order.pojo.OrderInfo;
+import cn.xupt.order.service.OrderService;
+
+public class OrderServiceImpl implements OrderService {
+
+	@Autowired
+	private TbOrderMapper orderMapper;
+	@Autowired
+	private TbOrderItemMapper orderItemMapper;
+	@Autowired
+	private TbOrderShippingMapper orderShippingMapper;
+	@Autowired
+	private JedisClient jedisClient;
+	@Override
+	public E3Result createOrder(OrderInfo orderInfo) {
+		// 生成订单号，使用redis的incr生成
+		JedisClient.
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package cn.xupt.order.service;
+
+public interface OrderService {
+
+}

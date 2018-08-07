@@ -1,0 +1,5 @@
+package cn.xupt.cart.service.interceptor;
+
+public class LoginInterceptor {
+
+}

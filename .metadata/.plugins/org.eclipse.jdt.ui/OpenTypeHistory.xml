@@ -6,4 +6,6 @@
 <typeInfo handle="=e3-manager-pojo/src\/main\/java&lt;cn.xupt.pojo{TbItem.java[TbItem" modifiers="1" timestamp="1532161840419"/>
 <typeInfo handle="=e3-sso-service/C:\/Program Files\/Java\/jdk1.8.0_112\/jre\/lib\/rt.jar&lt;javax.security.auth.spi(LoginModule.class[LoginModule" modifiers="1537" timestamp="1491806242875"/>
 <typeInfo handle="=e3-sso-interface/src\/main\/java&lt;cn.xupt.sso.service{LoginService.java[LoginService" modifiers="513" timestamp="1533278876170"/>
+<typeInfo handle="=e3-cart-web/G:\/Maven\/.m2\/repository\/org\/springframework\/spring-webmvc\/4.2.4.RELEASE\/spring-webmvc-4.2.4.RELEASE.jar&lt;org.springframework.web.servlet(HandlerInterceptor.class[HandlerInterceptor" modifiers="1537" timestamp="1463390358142"/>
+<typeInfo handle="=e3-cart-web/G:\/Maven\/.m2\/repository\/org\/springframework\/spring-webmvc\/4.2.4.RELEASE\/spring-webmvc-4.2.4.RELEASE.jar&lt;org.springframework.web.servlet(HandlerAdapter.class[HandlerAdapter" modifiers="1537" timestamp="1463390358142"/>
 </typeInfoHistroy>

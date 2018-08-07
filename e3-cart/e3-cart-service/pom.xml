@@ -15,7 +15,7 @@
 		</dependency>
 		<dependency>
 			<groupId>cn.xupt</groupId>
-			<artifactId>e3-content-interface</artifactId>
+			<artifactId>e3-cart-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	<!-- Spring -->
